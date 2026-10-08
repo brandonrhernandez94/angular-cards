@@ -1,0 +1,24 @@
+
+
+
+<section>
+    @for(product of products ; track $index ){
+        <div class="card">
+            <div class="img">
+                <img [src]="product.image" alt="">
+            </div>
+            <h2>{{product.name}}</h2>
+            <div class="price">
+                <p>{{product.price}}</p>
+                @if (product.price) {
+                    <button>Comprar</button>
+                }@else {
+                    <button class="disable">disable</button>
+                }
+            </div>
+        </div>
+
+
+
+}
+</section>
